@@ -1,0 +1,26 @@
+Component - reusable entity
+Angular is made up of components
+
+
+<div>
+    <button>Hello</button>
+    <h1>
+</div>
+
+
+
+
+app - box
+
+
+=======================
+Every comopnent:
+2 files
+
+1. html - view
+2. ts - functionality
+========================
+
+
+like for company evryone is an employee
+for angular everything is class
