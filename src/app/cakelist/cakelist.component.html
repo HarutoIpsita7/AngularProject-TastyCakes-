@@ -1,0 +1,14 @@
+<div class="text-center my-3">
+    <div class="btn-group " role="group" aria-label="Basic example">
+        
+        <button (click)="ascending_price()" class="btn btn-outline-dark">Sort Low to High</button>
+        <button (click)="descending_price()" class="btn btn-outline-dark">Sort High to Low</button>
+    </div>
+</div>
+<div class="row">
+    <app-cake *ngFor="let cake of cakes" class="col" [cakedata]="cake"></app-cake>
+</div>
+
+<!-- <button (click)="descending_ratings()" class="btn btn-outline-dark">Ratings</button> 
+<button (click)="changeport()" class="btn btn-outline-dark">Change Port</button>
+<button (click)="viewport()" class="btn btn-outline-dark">View Port</button> -->

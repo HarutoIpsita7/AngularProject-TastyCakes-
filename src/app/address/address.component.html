@@ -1,0 +1,90 @@
+<form #addressForm="ngForm" (submit)="addressForm.valid && sendAddress()">
+    <h1>Your Address</h1>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+        name="name"
+        required
+        #name="ngModel"
+        [(ngModel)]="userdetails.name"
+        type="text"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && name.errors">
+            <small *ngIf="name.errors['required']">Name is Required</small>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input
+        name="address"
+        required
+        #address="ngModel"
+        [(ngModel)]="userdetails.address"
+        type="text"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && address.errors">
+            <small *ngIf="address.errors['required']">Address is Required</small>
+        </div>
+    </div>
+    <!-- <div class="mb-3">
+        <label for="area" class="form-label">Area</label>
+        <input
+        name="area"
+        required
+        #area="ngModel"
+        [(ngModel)]="userdetails.area"
+        type="text"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && area.errors">
+            <small *ngIf="area.errors['required']">Area is Required</small>
+        </div>
+    </div> -->
+    <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input
+        name="city"
+        required
+        #city="ngModel"
+        [(ngModel)]="userdetails.city"
+        type="text"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && city.errors">
+            <small *ngIf="city.errors['required']">City is Required</small>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="pincode" class="form-label">Pin Code</label>
+        <input
+        name="pincode"
+        required
+        #pincode="ngModel"
+        [(ngModel)]="userdetails.pincode"
+        type="text"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && pincode.errors">
+            <small *ngIf="pincode.errors['required']">Pin Code is Required</small>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+        name="phone"
+        required
+        #phone="ngModel"
+        [(ngModel)]="userdetails.phone"
+        type="tel"
+        class="form-control"
+        />
+        <div class="text-danger" *ngIf="addressForm.submitted && phone.errors">
+            <small *ngIf="phone.errors['required']">Phone is Required</small>
+        </div>
+    </div>
+    <div class="mb-3 gap-2 d-grid">
+        <button type="submit" class="btn btn-primary" >Add Address <fa-icon [icon]="faAdd" ></fa-icon></button>
+    </div>
+</form>

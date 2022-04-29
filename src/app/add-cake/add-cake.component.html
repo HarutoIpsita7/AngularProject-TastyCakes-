@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="m-auto bg-light rounded-5">
+        <div>
+            <ul class="nav nav-tabs nav-justified p-3">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="uploadimg"
+                >Uplaod Image of the Cake</a
+            >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled"><fa-icon [icon]="faLongArrowAltRight"></fa-icon></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" (click)="checkImgUplaod()">Add Details of the cake</a>
+            </li>
+            </ul>
+        </div>
+        <div class="p-5 mb-5">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <div class="row">
+        <div class="col-md-3">
+            <nav class="nav flex-column">
+            <a class="nav-link" routerLink="uploadimg"
+                >Uplaod Image of the Cake</a
+            >
+            <a class="nav-link" routerLink="adddata">Add Details of the cake</a>
+            </nav>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+        </div> -->
+    </div>
+</div>

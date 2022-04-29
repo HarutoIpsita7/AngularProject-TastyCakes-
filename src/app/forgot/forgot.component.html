@@ -1,0 +1,31 @@
+<div class="m-auto container bg-light rounded-3">
+    <div class="m-5 p-5">
+        <form [formGroup]="forgotForm">
+            <h1>Forgot Password</h1>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input formControlName="validate_email" name="email" type="email" class="form-control" id="inputEmail"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" checked disabled>
+                <label class="form-check-label" for="exampleCheck1">Agree to our T&C</label>
+            </div>
+            <!-- <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-success" routerLink="/login">Log In</button>
+                <button type="submit" class="btn btn-warning" (click)="forgotpass()" >Forgot Password</button>
+                <button type="submit" class="btn btn-primary" routerLink="/signup">Sign Up</button>
+            </div> -->
+            <div class="row" >
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary" (click)="forgotpass()" >Forgot Password</button>
+                </div>
+                <div class="col-6">
+                    <div><a type="" class="" routerLink="/login">Back To Login</a></div>
+                    <div><a type="" class="" routerLink="/signup">New User? Sign Up Here</a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

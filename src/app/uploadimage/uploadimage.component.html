@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="px-4">
+        <form [formGroup]="imageForm">
+            <h1>Add Image of the cake</h1>
+            <div class="mb-3">
+                <label for="exampleInputURL" class="form-label">Upload the image file and save the generated text use it at the time of uploading the details</label>
+                <input formControlName="validate_url" name="url" type="file" class="form-control" (change)="getFile($event)">
+            </div>
+            <div class="d-grid gap-2 mb-5">
+                <button type="submit" class="btn btn-primary" (click)="addImg()" > Add Image <fa-icon [icon]="faImage"></fa-icon></button>
+            </div>
+        </form>
+    </div>
+</div>

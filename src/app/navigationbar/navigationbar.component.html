@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <!-- Data Binding -->
+        <a class="navbar-brand" routerLink="/"
+        appHighlight ><b>{{ projecttitle }}</b
+        >&nbsp;&nbsp;<small>{{ projectsubtitle }}</small></a
+        >
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item m-1" *ngIf="isLoggedIn">
+            <button
+                class="btn btn-outline-warning position-relative"
+                aria-current="page"
+                routerLink="/cart"
+            >
+                Cart <fa-icon [icon]="faCartPlus"></fa-icon>
+                <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="lengthCart"
+                >
+                {{lengthCart}}
+                <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+            </li>
+            <li class="nav-item m-1" *ngIf="isLoggedIn">
+            <button
+                class="btn btn-outline-info"
+                aria-current="page"
+                routerLink="/orders"
+            >
+                My Orders <fa-icon [icon]="faShoppingBag"></fa-icon>
+            </button>
+            </li>
+            <li class="nav-item m-1" *ngIf="isAdmin">
+            <button
+                class="btn btn-outline-light"
+                aria-current="page"
+                routerLink="/addcake"
+            >
+                Add Cake <fa-icon [icon]="faCake"></fa-icon>
+            </button>
+            </li>
+            <li class="nav-item m-1">
+            <button
+                class="btn btn-outline-success"
+                *ngIf="!isLoggedIn"
+                aria-current="page"
+                routerLink="/login"
+            >
+                Login <fa-icon [icon]="faSignIn"></fa-icon>
+            </button>
+
+            <button
+                class="btn btn-outline-danger"
+                *ngIf="isLoggedIn"
+                aria-current="page"
+                (click)="logout()"
+                routerLink="/"
+            >
+                Logout <fa-icon [icon]="faSignOut"></fa-icon>
+            </button>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            [(ngModel)]="searchtext"
+            name="search"
+            appHighlight
+            />
+            <button
+            class="btn btn-outline-success"
+            type="submit"
+            (click)="search()"
+            >
+            <fa-icon [icon]="faSearch"></fa-icon>
+            </button>
+        </form>
+        </div>
+    </div>
+</nav>

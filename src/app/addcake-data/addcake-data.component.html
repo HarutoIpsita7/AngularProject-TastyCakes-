@@ -1,0 +1,72 @@
+<div class="container px-4">
+  <form [formGroup]="addCakeForm">
+    <div class="mb-3">
+      <label for="" class="form-label">Add a name</label
+      ><input type="text" name="text" id="" class="form-control" formControlName="validate_name"/>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Add a price</label
+      ><input type="number" name="text" id="" class="form-control" formControlName="validate_price"/>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Add a description</label>
+      <input type="text" name="text" id="" class="form-control" formControlName="validate_description"/>
+      <!-- <textarea class="form-control" aria-label="With textarea" formControlName="validate_description"></textarea> -->
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Add a ingredients</label>
+      <input type="text" name="text" id="" class="form-control" formControlName="validate_ingredients"/>
+      <!-- <textarea class="form-control" aria-label="With textarea" formControlName="validate_ingredients"></textarea> -->
+    </div>
+    <!-- <div class="mb-3"><label for="" class="form-label">Image Address</label><p>{{imgAddress}}</p></div> -->
+    <!-- <input type="text" name="text" id="" [value]="imgAddress" class="form-control disabled" aria-describedby="imageHelp" formControlName="validate_image" /> -->
+    <!-- <div id="imageHelp" class="form-text">Place the value that was recieved after uploading the image ( If path is already visible don not edit it )</div> -->
+    <div class="mb-3">
+      <label for="" class="form-label">Add a type</label>
+      <!-- <input type="text" name="text" id="" class="form-control" /> -->
+      <select class="form-select" id="inputGroupSelect01" formControlName="validate_type">
+        <option selected value="Birthday">Birthday</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Celebration">Celebration</option>
+        <option value="Aniversary">Aniversary</option>
+        <option value="Farewell">Farewell</option>
+        <option value="New Year">New Year</option>
+        <option value="Teachers Day">Teachers Day</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Add a weight</label
+      ><input type="number" name="text" id="" class="form-control" formControlName="validate_weight"/>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Eggless</label><br>
+      <!-- <input type="email" class="form-control" name="" /> -->
+      <div class="form-check form-check-inline mx-3">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="validate_eggless"
+          id="inlineRadio1"
+          value="true"
+          checked
+          formControlName="validate_eggless"
+        />
+        <label class="form-check-label" for="inlineRadio1"> Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="validate_eggless"
+          id="inlineRadio2"
+          value="false"
+          formControlName="validate_eggless"
+        />
+        <label class="form-check-label" for="inlineRadio2"> No</label>
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary mt-3" (click)="addCake()">Add Details of Cake</button>
+    </div>
+  </form>
+</div>

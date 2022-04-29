@@ -1,0 +1,38 @@
+<div class="m-auto container bg-light rounded-3" *ngIf="!loggedIn">
+    <div class="m-5 p-5">
+        <form [formGroup]="loginForm">
+            <h1>Log In</h1>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input formControlName="validate_email" name="email" type="email" class="form-control" id="inputEmail"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input formControlName="validate_password" name="password" type="password" class="form-control"
+                    id="inputPassword">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" checked disabled>
+                <label class="form-check-label" for="exampleCheck1">Agree to our T&C</label>
+            </div>
+            <div class="row" >
+                <div class="col-6">
+                    <button type="submit" class="btn btn-success" (click)="login()">Log In</button>
+                </div>
+                <div class="col-6">
+                    <div><a type="" class="" routerLink="/signup">New User? Sign Up Here</a></div>
+                    <div><a type="" class="" routerLink="/forgot">Forgot Password ? </a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="m-auto mt-5 m-5 p-5 container bg-light rounded-3  text-center" *ngIf="loggedIn">
+    <div class="display-1">Welcome back {{loggedInUserName}},</div>
+    <div class="display-2">You are already loggedIn!</div>
+    <div class="d-grid gap-2 m-5 p-5">
+        <button class="btn btn-primary" routerLink="/">Back to Home</button>
+    </div>
+</div>

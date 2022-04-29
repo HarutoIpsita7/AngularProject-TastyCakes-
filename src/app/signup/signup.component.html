@@ -1,0 +1,87 @@
+<div class="m-auto container bg-light rounded-3">
+    <div class="m-5 p-5">
+        <form [formGroup]="signupForm">
+        <h1>Sign Up</h1>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input
+            name="email"
+            formControlName="validate_email"
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            aria-describedby="emailHelp"
+            />
+            <!-- <div class="text-danger">
+                <small>Name is Required</small>
+            </div> -->
+            <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input
+            name="name"
+            formControlName="validate_name"
+            type="text"
+            class="form-control"
+            id="inputName"
+            aria-describedby="emailHelp"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input
+            name="password"
+            formControlName="validate_password"
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            />
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" checked disabled/>
+            <label class="form-check-label" for="exampleCheck1"
+            >Agree to our T&C</label
+            >
+        </div>
+        <div class="row">
+            <div class="col-6">
+            <button type="submit" class="btn btn-success" (click)="signup()">
+                Sign Up
+            </button>
+            </div>
+            <div class="col-6">
+            <div>
+                <a type="" class="" routerLink="/login"
+                >Already have an account? Log In Here</a
+                >
+            </div>
+            <div>
+                <a type="" class="" routerLink="/forgot">Forgot Password ? </a>
+            </div>
+            </div>
+        </div>
+        </form>
+        <!-- <table class="table mt-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let user of users; let i = index" >
+                                <th scope="row">{{i}}</th>
+                                <td>{{user.email}}</td>
+                                <td>{{user.name}}</td>
+                                <td>{{user.password}}</td>
+                                <td><button class="btn btn-danger" (click) = "deleteUser(i)">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+    </div>
+</div>
